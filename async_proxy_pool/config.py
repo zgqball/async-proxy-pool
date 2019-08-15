@@ -29,7 +29,7 @@ INIT_SCORE = 9
 # sanic web host
 SANIC_HOST = "localhost"
 # sanic web port
-SANIC_PORT = 8000
+SANIC_PORT = 3389
 # 是否开启 sanic 日志记录
 SANIC_ACCESS_LOG = True
 
