@@ -15,7 +15,7 @@ REDIS_PORT = 6379
 # redis 密码
 REDIS_PASSWORD = '25558740haom'
 # redis set key
-REDIS_KEY = "proxies:ranking"
+REDIS_KEY = {"proxies":"ranking"}
 # redis 连接池最大连接量
 REDIS_MAX_CONNECTION = 20
 
