@@ -8,12 +8,12 @@ REQUEST_DELAY = 0
 
 # redis 地址
 
-REDIS_HOST = "39.105.93.225"
+REDIS_HOST = "47.106.130.202"
 # REDIS_HOST = "144.214.137.2"
 # redis 端口
-REDIS_PORT = 22
+REDIS_PORT = 6379
 # redis 密码
-REDIS_PASSWORD = None
+REDIS_PASSWORD = '25558740haom'
 # redis set key
 REDIS_KEY = "proxies:ranking"
 # redis 连接池最大连接量
