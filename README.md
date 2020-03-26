@@ -14,7 +14,7 @@
 
 #### 下载项目源码
 ```bash
-$ git clone https://github.com/zgqball/zgqball/async-proxy-pool.git
+$ git clone https://github.com/zgqball/async-proxy-pool.git
 ```
 
 #### 安装依赖
@@ -479,7 +479,4 @@ except:
 
 * [ProxyPool](https://github.com/WiseDoge/ProxyPool)
 * [proxy_pool](https://github.com/jhao104/proxy_pool)
-
-### License
-
-MIT [©zgqball](https://github.com/zgqball)
+* [async-proxy-pool](https://github.com/chenjiandongx/async-proxy-pool)
