@@ -5,8 +5,7 @@
 
 ### 运行环境
 
-项目使用了 [sanic](https://github.com/channelcat/sanic)，一个异步网络框架。所以建议运行 Python 环境为 Python3.5+，并且 sanic 不支持 Windows 系统，Windows 用户（比如我 😄）可以考虑使用 Ubuntu on Windows。
-
+项目使用了 [sanic](https://github.com/channelcat/sanic)，一个异步网络框架。所以建议运行 Python 环境为 Python3.5+.
 
 ### 如何使用
 
@@ -15,7 +14,7 @@
 
 #### 下载项目源码
 ```bash
-$ git clone https://github.com/chenjiandongx/async-proxy-pool.git
+$ git clone https://github.com/zgqball/zgqball/async-proxy-pool.git
 ```
 
 #### 安装依赖
@@ -30,7 +29,7 @@ $ pipenv install
 ```
 
 #### 配置文件
-配置文件 [config.py](https://github.com/chenjiandongx/async-proxy-pool/blob/master/async_proxy_pool/config.py)，保存了项目所使用到的所有配置项。如下所示，用户可以根据需求自行更改。不然按默认即可。
+配置文件 [config.py](https://github.com/zgqball/async-proxy-pool/blob/master/async_proxy_pool/config.py)，保存了项目所使用到的所有配置项。如下所示，用户可以根据需求自行更改。不然按默认即可。
 ```
 #!/usr/bin/env python
 # coding=utf-8
@@ -130,23 +129,23 @@ $ python server.py
 
 项目主要几大模块分别是爬取模块，存储模块，校验模块，调度模块，接口模块。
 
-* [爬取模块](https://github.com/chenjiandongx/async-proxy-pool/blob/master/async_proxy_pool/crawler.py)
+* [爬取模块](https://github.com/zgqball/async-proxy-pool/blob/master/async_proxy_pool/crawler.py)
 
 负责爬取代理网站，并将所得到的代理存入到数据库，每个代理的初始化权值为 INIT_SCORE。
 
-* [存储模块](https://github.com/chenjiandongx/async-proxy-pool/blob/master/async_proxy_pool/database.py)
+* [存储模块](https://github.com/zgqball/async-proxy-pool/blob/master/async_proxy_pool/database.py)
 
 封装了 Redis 操作的一些接口，提供 Redis 连接池。
 
-* [校验模块](https://github.com/chenjiandongx/async-proxy-pool/blob/master/async_proxy_pool/validator.py)
+* [校验模块](https://github.com/zgqball/async-proxy-pool/blob/master/async_proxy_pool/validator.py)
 
 验证代理 IP 是否可用，如果代理可用则权值 +1，最大值为 MAX_SCORE。不可用则权值 -1，直至权值为 0 时将代理从数据库中删除。
 
-* [调度模块](https://github.com/chenjiandongx/async-proxy-pool/blob/master/async_proxy_pool/scheduler.py)
+* [调度模块](https://github.com/zgqball/async-proxy-pool/blob/master/async_proxy_pool/scheduler.py)
 
 负责调度爬取器和校验器的运行。
 
-* [接口模块](https://github.com/chenjiandongx/async-proxy-pool/blob/master/async_proxy_pool/webapi.py)
+* [接口模块](https://github.com/zgqball/async-proxy-pool/blob/master/async_proxy_pool/webapi.py)
 
 使用 sanic 提供 **WEB API** 。
 
@@ -306,8 +305,8 @@ class Crawler:
 
 本项目使用了 Sanic，但是开发者完全可以根据自己的需求选择其他 web 框架，web 模块是完全独立的，替换框架不会影响到项目的正常运行。需要如下步骤。
 
-1. 在 [webapi.py](https://github.com/chenjiandongx/async-proxy-pool/blob/master/async_proxy_pool/webapi.py) 里更换框架。
-2. 在 [server.py](https://github.com/chenjiandongx/async-proxy-pool/blob/master/server.py) 里修改 app 启动细节。
+1. 在 [webapi.py](https://github.com/zgqball/async-proxy-pool/blob/master/async_proxy_pool/webapi.py) 里更换框架。
+2. 在 [server.py](https://github.com/zgqball/async-proxy-pool/blob/master/server.py) 里修改 app 启动细节。
 
 
 ### Sanic 性能测试
@@ -372,7 +371,7 @@ Transfer/sec:      1.65MB
 
 ### 实际代理性能测试
 
-[test_proxy.py](https://github.com/chenjiandongx/async-proxy-pool/blob/master/test/test_proxy.py) 用于测试实际代理性能
+[test_proxy.py](https://github.com/zgqball/async-proxy-pool/blob/master/test/test_proxy.py) 用于测试实际代理性能
 
 #### 运行代码
 
@@ -461,7 +460,7 @@ except:
 
 整个项目都是基于 aiohttp 这个异步网络库的，在这个项目的文档中，关于代理的介绍是这样的。
 
-![](https://user-images.githubusercontent.com/19553554/40276465-745db54a-5c3d-11e8-8662-0c73fdf4fe88.png)
+![](https://user-images.githubusercontent.com/19553554/40276465-745db54a-5c3d-11
 
 **划重点：aiohttp supports HTTP/HTTPS proxies**
 
@@ -483,4 +482,4 @@ except:
 
 ### License
 
-MIT [©chenjiandongx](https://github.com/chenjiandongx)
+MIT [©zgqball](https://github.com/zgqball)
